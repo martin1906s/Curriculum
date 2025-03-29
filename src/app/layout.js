@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
                 "addressCountry": "Ecuador"
               },
               "birthDate": "2007-06-19",
-              "image": "https://martinsimbana.vercel.app/images/avatar.jpg",
+              "image": "https://martinsimbana.vercel.app/_next/image?url=%2Fimages%2FI.png&w=384&q=75",
               "knowsAbout": ["HTML", "JavaScript", "React", "Node.js", "PostgreSQL"]
             })
           }}
