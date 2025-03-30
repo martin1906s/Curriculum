@@ -1,40 +1,43 @@
 import Script from 'next/script';
+import './globals.css';
 
 export default function RootLayout({ children }) {
+  const canonicalUrl = 'https://martinsimbana.vercel.app';
+  const pageTitle = 'Martin Simbaña | Desarrollador FullStack JS - React/Node.js Expert';
+  const pageDescription =
+    'CV profesional de Martin Simbaña - Desarrollador FullStack con 3 años de experiencia en JavaScript, React, Node.js y PostgreSQL. Portfolio con proyectos reales en Ecuador.';
+
   return (
-    <html lang="en">
-      <head><meta charSet="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" /><title>Martín Simbaña | Software Development Student</title><meta name="description" content="Software Development student specializing in JavaScript, React, and Node.js. Passionate about building modern web applications and learning new technologies." /><link rel="icon" href="https://static-00.iconduck.com/assets.00/cv-icon-216x256-oug02lqi.png" sizes="any" /><link rel="icon" href="https://static-00.iconduck.com/assets.00/cv-icon-216x256-oug02lqi.png" type="image/svg+xml" /><link rel="apple-touch-icon" href="https://static-00.iconduck.com/assets.00/cv-icon-216x256-oug02lqi.png" /><meta property="og:title" content="Martín Simbaña | Software Development Student" /><meta property="og:description" content="Software Development student | JavaScript, React, Node.js | Building modern web applications." /><meta property="og:image" content="https://martinsimbana.vercel.app/images/avatar.jpg" /><meta property="og:url" content="https://martinsimbana.vercel.app/" /><meta property="og:type" content="website" /><Script
-          id="schema-person"
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "Person",
-              "name": "Martín Simbaña",
-              "jobTitle": "Software Development Student",
-              "url": "https://martinsimbana.vercel.app/",
-              "telephone": "+593983331900",
-              "email": "martin.simbana007@gmail.com",
-              "sameAs": [
-                "https://www.linkedin.com/in/mart%C3%ADn-simba%C3%B1a-9a6a91357/",
-                "https://github.com/martin1906s"
-              ],
-              "description": "Aspiring full-stack developer with skills in JavaScript, React, Node.js, and PostgreSQL. Currently expanding knowledge in modern web technologies.",
-              "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Quito",
-                "addressRegion": "Pichincha",
-                "addressCountry": "Ecuador"
-              },
-              "birthDate": "2007-06-19",
-              "image": "https://martinsimbana.vercel.app/_next/image?url=%2Fimages%2FI.png&w=384&q=75",
-              "knowsAbout": ["HTML", "JavaScript", "React", "Node.js", "PostgreSQL"]
-            })
-          }}
-        /></head>
-      <body>
-        {children}
-      </body>
+    <html lang="es" prefix="og: https://ogp.me/ns#">
+      <head>
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="theme-color" content="#0f172a" />
+        <title>{pageTitle}</title>
+        <meta name="description" content={pageDescription} />
+        <meta name="keywords" content="desarrollador JavaScript Ecuador, programador React Quito, desarrollador Node.js, portfolio programador, CV desarrollador web, Martin Simbaña developer" />
+        <link rel="canonical" href={canonicalUrl} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={canonicalUrl} />
+        <meta property="og:title" content={pageTitle} />
+        <meta property="og:description" content={pageDescription} />
+        <meta property="og:image" content={`${canonicalUrl}/images/seo-preview.jpg`} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={pageTitle} />
+        <meta name="twitter:description" content={pageDescription} />
+        <meta name="twitter:image" content={`${canonicalUrl}/images/seo-preview.jpg`} />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/cv.svg" />
+        <Script strategy="afterInteractive" src={`https://www.googletagmanager.com/gtag/js?id=G-V9YMPXWEKC`} />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-V9YMPXWEKC', { page_path: window.location.pathname, anonymize_ip: true });
+          `}
+        </Script>
+      </head>
+      <body className="bg-slate-900 text-slate-100">{children}</body>
     </html>
   );
 }

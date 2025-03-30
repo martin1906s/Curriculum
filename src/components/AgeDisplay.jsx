@@ -7,7 +7,7 @@ export default function AgeDisplay() {
 
     return (
         <span className="text-accent font-medium">
-            {age} Age
+            {age} Años
         </span>
     );
 }
