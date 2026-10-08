@@ -23,17 +23,17 @@ export default function ProjectsShowcase({ projects, showMoreLink = false }) {
       <div className="project-layout">
         {projects.map((project, index) => {
           const isPrivate = !project.image;
-          
+
           return (
             <Reveal key={index} delay={index * 0.1}>
-              <article 
+              <article
                 className={`project-card ${isPrivate ? 'project-private' : ''}`}
-                itemProp="itemListElement" 
-                itemScope 
+                itemProp="itemListElement"
+                itemScope
                 itemType="https://schema.org/ListItem"
               >
-                <div 
-                  className="project-image" 
+                <div
+                  className="project-image"
                   onClick={isPrivate ? () => openModal(project) : undefined}
                   style={isPrivate ? { cursor: 'pointer' } : {}}
                 >
@@ -61,10 +61,9 @@ export default function ProjectsShowcase({ projects, showMoreLink = false }) {
                     </>
                   )}
                 </div>
-                
+
                 <div className="project-meta">
                   <span itemProp="keywords">{project.type}</span>
-                  <span className="overline">2023 - 2024</span>
                 </div>
                 <h3 itemProp="name">{project.name}</h3>
                 <p itemProp="description">{project.description}</p>
@@ -97,8 +96,8 @@ export default function ProjectsShowcase({ projects, showMoreLink = false }) {
               textTransform: 'uppercase',
               transition: 'transform 0.2s'
             }}
-            onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-            onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+              onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+              onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
             >
               Ver Más Proyectos <ExternalLink size={16} />
             </Link>
@@ -116,23 +115,23 @@ export default function ProjectsShowcase({ projects, showMoreLink = false }) {
               <span>{selectedProject.type}</span>
             </div>
             <h3 style={{ fontSize: '32px', marginBottom: '20px', letterSpacing: '-0.05em' }}>{selectedProject.name}</h3>
-            <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'rgba(20, 20, 22, 0.85)', marginBottom: '30px' }}>
+            <p style={{ fontSize: '16px', lineHeight: '1.7', color: 'rgba(243, 240, 235, 0.75)', marginBottom: '30px' }}>
               {selectedProject.description}
             </p>
-            
+
             <div className="stack" style={{ marginBottom: '40px' }}>
               {selectedProject.stack.map(tech => (
-                <span key={tech} style={{ borderColor: 'rgba(20, 20, 22, 0.15)', color: 'var(--ink)' }}>{tech}</span>
+                <span key={tech} style={{ borderColor: 'rgba(255, 255, 255, 0.15)', color: 'var(--acid)' }}>{tech}</span>
               ))}
             </div>
 
             {selectedProject.url && selectedProject.url !== '#' && selectedProject.image && (
-              <a 
-                href={selectedProject.url} 
-                target="_blank" 
-                rel="noreferrer" 
-                className="primary-action" 
-                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}
+              <a
+                href={selectedProject.url}
+                target="_blank"
+                rel="noreferrer"
+                className="primary-action"
+                style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none', background: 'var(--paper)', color: 'var(--ink)' }}
               >
                 Ver Proyecto <ArrowRight size={18} style={{ marginLeft: '10px', transform: 'rotate(-45deg)' }} />
               </a>

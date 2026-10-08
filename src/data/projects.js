@@ -1,5 +1,19 @@
 export const projectsData = [
   {
+    name: 'Sistema de Solicitudes de Tarjetas',
+    type: 'EMPRESARIAL',
+    description: 'Plataforma corporativa de tarjetas de crédito/débito. APIs REST, aplicación ETL, monitoreo en tiempo real y Spring Security.',
+    stack: ['Java', 'Spring Boot', 'Angular', 'SQL Server', 'Jenkins', 'ETL'],
+    url: '#'
+  },
+  {
+    name: 'IA Empresarial',
+    type: 'BACKEND & AI',
+    description: 'Sistema inteligente para consulta documental. Almacenamiento vectorial, embeddings, chunking y recuperación semántica.',
+    stack: ['Next.js', 'MongoDB', 'OpenAI', 'SharePoint'],
+    url: '#'
+  },
+  {
     name: 'NeuroGame',
     image: '/projects/neurogame.svg',
     type: 'FULL STACK',

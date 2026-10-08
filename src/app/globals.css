@@ -57,40 +57,44 @@ h1,h2,h3,p { margin-top:0; }.hero h1 { font-size:clamp(60px,8.1vw,125px);line-he
   padding: 20px;
 }
 .modal-content {
-  background: var(--paper);
-  color: var(--ink);
-  padding: 40px;
-  max-width: 550px;
+  background: var(--ink);
+  color: var(--paper);
+  padding: 50px;
+  max-width: 600px;
   width: 100%;
   position: relative;
-  border-radius: 4px;
+  border-radius: 12px;
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 25px 50px rgba(0,0,0,0.4);
 }
 .close-modal {
   position: absolute;
   top: 20px;
   right: 20px;
-  background: none;
-  border: none;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
   cursor: pointer;
-  color: var(--ink);
-  padding: 5px;
+  color: var(--paper);
+  padding: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  transition: background 0.2s;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .close-modal:hover {
-  background: rgba(20,20,22,0.1);
+  background: rgba(255,255,255,0.1);
+  transform: scale(1.05);
 }
 
 /* OVERRIDES PARA PRIVADO Y RESPONSIVE */
-.project-private {
+.project-private .project-image {
   background-color: var(--ink) !important;
   background-image: radial-gradient(rgba(255,255,255,0.08) 1.5px, transparent 1.5px) !important;
   background-size: 24px 24px !important;
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+  box-shadow: 14px 15px 0 var(--ink) !important;
 }
 
 .project-private .private-stamp {
