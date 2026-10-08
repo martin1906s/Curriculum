@@ -1,15 +1,19 @@
 export const skillsData = [
-    { name: "HTML", image: "/skills/html.svg", level: "Avanzado" },
-    { name: "JavaScript", image: "/skills/javascript.svg", level: "Intermedio" },
-    { name: "TypeScript", image: "/skills/typescript.svg", level: "Basico" },
-    { name: "CSS", image: "/skills/css.svg", level: "Intermedio" },
+    { name: "JavaScript", image: "/skills/javascript.svg", level: "Avanzado" },
+    { name: "TypeScript", image: "/skills/typescript.svg", level: "Intermedio" },
     { name: "Python", image: "/skills/python.svg", level: "Intermedio" },
-    { name: "PostgreSQL", image: "/skills/postgresql.svg", level: "Intermedio" },
-    { name: "React Native", image: "/skills/react.svg", level: "Basico" },
+    { name: "Java", image: "/skills/java.svg", level: "Intermedio" },
+    { name: "Dart", image: "/skills/dart.svg", level: "Intermedio" },
+    { name: "Flutter", image: "/skills/flutter.svg", level: "Intermedio" },
     { name: "Node.js", image: "/skills/nodedotjs.svg", level: "Intermedio" },
     { name: "Next.js", image: "/skills/nextdotjs.svg", level: "Intermedio" },
-    { name: "Java", image: "/skills/java.svg", level: "Intermedio" },
-    {name: "Git", image: "/skills/github.svg", level: "Intermedio" },
+    { name: "React Native", image: "/skills/react.svg", level: "Intermedio" },
+    { name: "Git", image: "/skills/github.svg", level: "Avanzado" },
+    { name: "Firestore", image: "/skills/firestore.png", level: "Intermedio" },
+    { name: "PostgreSQL", image: "/skills/postgresql.svg", level: "Intermedio" },
+    { name: "SQLite", image: "/skills/sqlite.svg", level: "Intermedio" },
+    { name: "HTML", image: "/skills/html.svg", level: "Avanzado" },
+    { name: "CSS", image: "/skills/css.svg", level: "Intermedio" },
 ];
 
 export const socialLinks = [
