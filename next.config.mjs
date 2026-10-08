@@ -13,6 +13,19 @@ const nextConfig = {
         });
         return config;
     },
+    turbopack: {},
+    images: {
+        remotePatterns: [
+            {
+                protocol: 'https',
+                hostname: '**',
+            },
+            {
+                protocol: 'http',
+                hostname: '**',
+            },
+        ],
+    },
 };
 
 export default nextConfig; // <-- Cambiado a ES Modules
